@@ -30,6 +30,8 @@ COPY --chown=onnc:onnc ./external ./external/
 COPY --chown=onnc:onnc ./scripts ./scripts/
 COPY --chown=onnc:onnc ./build.* ./
 
+RUN mkdir -p ./src
+
 ARG THREAD=8
 
 RUN MAX_MAKE_JOBS=${THREAD} \
